@@ -2,11 +2,11 @@
 
 Assignment 1: 01B Concept & Sketches
 
-####Idea 1: 
+#### Idea 1: 
 
 ![](idea1.JPG)
 
-###What we fought and fight for: <br>the history of activism 
+### What we fought and fight for: <br>the history of activism 
 
 Questions I want to explore: 
 What historic movements associated with activism have taken place throughout history? What ephemeral artifacts, such as posters and pamphlets, have we preserved in museums? How has the imagery evolved throughout time?
@@ -23,11 +23,11 @@ The first project idea I have is to visualize the available records for Memorabi
 
 
 
-####Idea 2: 
+#### Idea 2: 
 
 ![](idea2.JPG)
 
-###Unidentified: the art that lived
+### Unidentified: the art that lived
 
 Questions I want to explore: What is the type of art in the museums with unidentified artists? Is there a prevalence in one medium vs another? Is there a correlation between the year in which the artifact was produced, the medium and the number of artifacts from unidentified artists?
 
@@ -43,11 +43,11 @@ While exploring different ideas and reviewing the artifacts available in the Smi
 
 
 
-####Idea 3: 
+#### Idea 3: 
 
 ![](idea3.JPG)
 
-###Traveling flowers - a trip from Bulgaria to the States
+### Traveling flowers - a trip from Bulgaria to the States
 
 Questions I want to explore: What types of plants traveled 10,000 kilometers from Bulgaria to USA? Where do they originate from? How many types of plants were collected from those regions? Is there a specific region which provided most of those artifacts?
 
