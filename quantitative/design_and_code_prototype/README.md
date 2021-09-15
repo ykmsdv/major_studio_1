@@ -18,6 +18,7 @@ The second visualization is a vertical timeline, where the images of the artifac
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ![](sketch/sketch-high-fidelity.png)
 =======
 ![](sketch/sketch-high fidelity.pdf)
@@ -25,6 +26,9 @@ The second visualization is a vertical timeline, where the images of the artifac
 =======
 ![](sketch/sketch-high-fidelity.PNG)
 >>>>>>> c9bf5fb... included PNG sketch
+=======
+![](sketch/sketch-high-fidelity.png)
+>>>>>>> 16f3f63... fixed typo
 
 ##### Code prototype
 The code prototype is implemented in JavaScript according the starter code provided in class. It makes an initial API request which gathers information about the number of rows available for the search query. The row count is then used to calculate the number of API requests needed, as the rows are limited to 1000 per page in the API documentation. Next, I fetch all the data and filter the API response only to the data I will need for my visualizations. The data is then structured into an empty array of objects. Finally, feed the array data into a 'pre' tag and display it in the HTML. 
