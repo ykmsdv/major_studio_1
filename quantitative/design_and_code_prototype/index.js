@@ -9,6 +9,7 @@ const apiKey = "";
 const apiKey = "";  
 >>>>>>> 1991f71... add API request code and high-fidelity sketch
 
+
 // search base URL
 const searchBaseURL = "https://api.si.edu/openaccess/api/v1.0/search";
 
