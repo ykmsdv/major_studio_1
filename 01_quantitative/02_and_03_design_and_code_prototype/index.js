@@ -3,11 +3,7 @@
 // Using this data set https://collections.si.edu/search/results.htm?q=Flowers&view=grid&fq=data_source%3A%22Cooper+Hewitt%2C+Smithsonian+Design+Museum%22&fq=online_media_type%3A%22Images%22&media.CC0=true&fq=object_type:%22Embroidery+%28visual+works%29%22
 
 // put your API key here;
-<<<<<<< HEAD
 const apiKey = "";  
-=======
-const apiKey = "";  
->>>>>>> 1991f71... add API request code and high-fidelity sketch
 
 
 // search base URL
