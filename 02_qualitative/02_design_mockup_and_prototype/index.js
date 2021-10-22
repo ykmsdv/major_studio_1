@@ -1,7 +1,3 @@
-// Smithsonian API example code
-// check API documentation for search here: http://edan.si.edu/openaccess/apidocs/#api-search-search
-// Using this data set https://collections.si.edu/search/results.htm?q=Flowers&view=grid&fq=data_source%3A%22Cooper+Hewitt%2C+Smithsonian+Design+Museum%22&fq=online_media_type%3A%22Images%22&media.CC0=true&fq=object_type:%22Embroidery+%28visual+works%29%22
-
 // put your API key here;
 const apiKey = "";  
 
@@ -45,12 +41,8 @@ function fetchSearchData(searchTerm) {
         } else {
           searchAllURL = url + `&start=${i * pageSize}&rows=${pageSize}`;
         }
-        // console.log(searchAllURL)
-        // console.log('rowCount: ', data.response.rowCount)
         fetchAllData(searchAllURL);
-      
       }
-      // console.log(searchAllURL)
     })
     .catch(error => {
       console.log(error);
@@ -59,8 +51,6 @@ function fetchSearchData(searchTerm) {
 
 // fetching all the data listed under our search and pushing them all into our custom array
 function fetchAllData(url) {
-
-  // console.log('fetch')
    window
   .fetch(url)
   .then(res => res.json())
@@ -70,16 +60,6 @@ function fetchAllData(url) {
     data.response.rows.forEach(function(n) {
       addObject(n);
     });
-
-    // jsonString += JSON.stringify(myArray, null, 2);
-
-
-    // console.log(jsonString);
-    // putDataInWindow(jsonString, myArray.length);
-    // console.log(myArray)
-
-    // console.log(myArray, myArray.length)
-
   })
   .catch(error => {
     console.log(error)
@@ -90,7 +70,6 @@ function fetchAllData(url) {
 // create your own array with just the data you need
 function addObject(objectData) {  
 
-  // we've encountered that some places have data others don't
   let currentImage;
   if( objectData.content.descriptiveNonRepeating.hasOwnProperty('online_media') && objectData.content.descriptiveNonRepeating.online_media.hasOwnProperty('media')) {
     currentImage = objectData.content.descriptiveNonRepeating.online_media.media;
@@ -103,7 +82,6 @@ function addObject(objectData) {
     title: objectData.title,
     date: objectData.content.indexedStructured.date,
     images: currentImage,
-    // topic: currentTopic,
     museum_short: objectData.unitCode,
     museum_long: objectData.content.descriptiveNonRepeating.data_source,
     source_link: objectData.content.descriptiveNonRepeating.record_link
@@ -117,13 +95,11 @@ function putDataInWindow(data, nArtifacts) {
     h3.innerHTML = `Getting data: ${nArtifacts} artifacts`;
     document.getElementById('data').append(h3);
 
-
     // feed the data in a <pre> tag
     const pre = document.createElement('pre');
     pre.innerHTML = data;
     document.getElementById('data').append(pre);
 }
-
 
 setTimeout(() => {
     document.getElementById("dwn-btn").value = 'Data ready: Download JSON';
@@ -133,41 +109,32 @@ setTimeout(() => {
 
 if(nArtifacts === myArray.length) {
 
-  console.log(myArray, myArray.length)
-
-
   // click the download button to initiate download
   document.getElementById("dwn-btn").addEventListener("click", function(){
-    // fetching our stringified JSON data
-    // var text = jsonString;
-
     // name of our file
-    var filename = "data.json"
-    console.log('button clicked')
-    
+    const filename = "data.json";
+
     download(filename, JSON.stringify(myArray, null, 2));
 
   }, false);
       
 }
 
-
 fetchSearchData(search);
 
+// download the file with the data you need only
+function download(filename, text) {
+  let element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
 
-  function download(filename, text) {
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    element.setAttribute('download', filename);
-    console.log('am I executing at all?')
+  element.style.display = 'none';
+  document.body.appendChild(element);
 
-    element.style.display = 'none';
-    document.body.appendChild(element);
+  element.click();
 
-    element.click();
-
-    document.body.removeChild(element);
-  }
+  document.body.removeChild(element);
+}
 
 
 
