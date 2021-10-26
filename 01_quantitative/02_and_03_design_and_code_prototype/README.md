@@ -16,8 +16,6 @@ The project I selected is "***What we fought and fight for: the history of activ
 Starting with the initial sketch on paper, I created the high-fidelity sketch in Figma. The multiline chart represents the different movements/topics the artifacts were created for. The x axis represents the time period in which they were created, and the y axis represents the amount of artifacts for the time period. Each line groups the artifacts according the movement they were created for.
 The second visualization is a vertical timeline, where the images of the artifacts are displayed according the time of their creation. 
 
-
-
 ![](sketch/sketch-high-fidelity.PNG)
 
 
